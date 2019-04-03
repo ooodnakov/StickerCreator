@@ -26,4 +26,4 @@ name#1  is done.
 name#2  is done.
 ...
 ```
-5. You are brilliant!
+5. You are brilliant! You are able to find your pngs in __output__ folder.
