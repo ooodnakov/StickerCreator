@@ -1,5 +1,5 @@
 # StickerCreator
-Creats suitable images for stickers in TG.
+Creats suitable round images for stickers in TG.
 
 My friend asked me to crop some images for him.
 At first I was doing it manually. But he saw my struggle and proposed to Python it.
