@@ -13,7 +13,7 @@ for file in os.listdir('input/'):           #search for images in 'input'
 print('We detected such images to crop:')           #ask to proceed
 for img in images:
     print(img)
-if input('Do you want to proceed(Y,N)?').lower() != 'y':
+if input('Do you want to proceed (Y,N)?').lower() != 'y':
     quit()
 
 if input('Do you want to keep original names (Y/N)?').lower() != 'y':
