@@ -17,6 +17,7 @@ name#1
 name#2
 ...
 Do you want to proceed(Y,N)?
+Do you want to keep original names (Y/N)?
 ```
 
 4. Get your stickers in __output__ folder.
