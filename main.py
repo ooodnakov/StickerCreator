@@ -31,7 +31,6 @@ for name in images:         #resizes and crops
 
     output = ImageOps.fit(img, mask.size, centering=(0.5, 0.5))             #crops according to mask
     output.putalpha(mask)
-    output.save('output/{}.png'.format(num))
+    output.save('output/{}.png'.format(file[:-4]))
 
-    num += 1
-    print(num, ' is done.')
+    print(file,' is done.')
