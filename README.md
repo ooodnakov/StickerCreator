@@ -1,3 +1,4 @@
+# Sticker Creator.
 Creats suitable round images for stickers in TG.
 
 My friend asked me to crop some images for him.
