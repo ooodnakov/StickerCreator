@@ -48,6 +48,11 @@ for name in images:         #resizes and crops
     output = ImageOps.fit(img, mask.size, centering=(0.5, 0.5))             #crops according to mask
     output.putalpha(mask)
 
+    try:                            #creats output folder if it doesn't exist
+        os.mkdir('output')
+    except FileExistsError:
+        pass
+
     if orig:
         output.save('output/{}.png'.format(name[:-4]))
     else:
