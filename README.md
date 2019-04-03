@@ -39,4 +39,4 @@ You can just look to source code or read further:
    4. Creating a round mask of suitable size.
    5. Putting alpha mask.
    6. Saving image with according filename.
-3.Putting my sticker in __output__ folder so that everyone knows who done this amazing sticker pack!
+3. Putting my sticker in __output__ folder so that everyone knows who done this amazing sticker pack!
