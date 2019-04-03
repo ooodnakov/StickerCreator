@@ -1,5 +1,7 @@
 from PIL import Image, ImageOps, ImageDraw
 import os
+import shutil
+
 
 images = []
 num = 1
@@ -14,8 +16,22 @@ for img in images:
 if input('Do you want to proceed(Y,N)?').lower() != 'y':
     quit()
 
+if input('Do you want to keep original names (Y/N)?').lower() != 'y':
+    orig = False
+else:
+    orig = True
+
+
 for name in images:         #resizes and crops
     img = Image.open('input/'+name)
+
+    width, height = img.size            #crop to square
+    if width > height:
+        margin = (width - height) / 2
+        img = img.crop((margin, 0, width - margin, height))
+    elif width < height:
+        margin = (-width + height) / 2
+        img = img.crop((0, margin, width, height - margin))
 
     basewidth = 512                 #resizes image to 512x512
     wpercent = (basewidth / float(img.size[0]))
@@ -31,6 +47,12 @@ for name in images:         #resizes and crops
 
     output = ImageOps.fit(img, mask.size, centering=(0.5, 0.5))             #crops according to mask
     output.putalpha(mask)
-    output.save('output/{}.png'.format(file[:-4]))
 
-    print(file,' is done.')
+    if orig:
+        output.save('output/{}.png'.format(name[:-4]))
+    else:
+        output.save('output/{}.png'.format(images.index(name)))
+
+    print(name, ' is done.')
+
+shutil.copy('CoolkaOS Sticker.png', 'output/CoolkaOS Sticker.png')
