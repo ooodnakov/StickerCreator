@@ -33,10 +33,10 @@ name#2  is done.
 You can just look to source code or read further:
 1. Make a list of image names in __input__ folder.
 2. After that we iterate through each name in a list
-  1. Opening an __Image__.
-  2. Cropping it to square which is centered.
-  3. Resizing image to 512x512.
-  4. Creating a round mask of suitable size.
-  5. Putting alpha mask.
-  6. Saving image with according filename.
+   1. Opening an __Image__.
+   2. Cropping it to square which is centered.
+   3. Resizing image to 512x512.
+   4. Creating a round mask of suitable size.
+   5. Putting alpha mask.
+   6. Saving image with according filename.
 3.Putting my sticker in __output__ folder so that everyone knows who done this amazing sticker pack!
