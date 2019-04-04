@@ -7,7 +7,7 @@ images = []
 num = 1
 
 for file in os.listdir('input/'):           #search for images in 'input'
-    if file[-3:] == 'jpg' or file[-3:] == 'png' or file[-4:] ==  'jpeg':
+    if file[-3:].lower() == 'jpg' or file[-3:].lower() == 'png' or file[-4:].lower() == 'jpeg':
         images.append(file)
 
 print('We detected such images to crop:')           #ask to proceed
@@ -60,4 +60,5 @@ for name in images:         #resizes and crops
 
     print(name, ' is done.')
 
-shutil.copy('CoolkaOS Sticker.png', 'output/CoolkaOS Sticker.png')
+if not os.path.isfile('output/CoolkaOS Sticker(EXAMPLE).png'):
+    shutil.copy('CoolkaOS Sticker.png', 'output/CoolkaOS Sticker.png')
