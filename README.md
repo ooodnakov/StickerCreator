@@ -10,7 +10,7 @@ And it is my result.
 3. Love dots.
 ## Manual.
 1. Put your images in __input__ folder.
-2. Run __main.py__.
+2. Run __imager.py__.
 3. Proceed in terminal.
 ```
 We detected such images to crop:
